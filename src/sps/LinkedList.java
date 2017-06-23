@@ -26,28 +26,107 @@ public class LinkedList {
 		Head=linked;
 	}
 
-//dispalying data in linked list
+//displaying data in linked list
 	
 	public void display(){
 		LinkedList temp=Head;
 		while(temp !=null){
-			System.out.println(temp.number + " ");
+			System.out.print(temp.number + " ");
 			temp=temp.next;
+		}
+		System.out.println("\n");
+	}
+
+//deleting first data from linked list
+	
+	public void delete(){
+		if (!isEmpty()){
+			Head=Head.next;
+		}
+		else{
+			System.out.println("Linked list is empty");
+		}
+	}
+	
+//Search linked list
+	
+	public void search(int number){
+		LinkedList temp=Head;
+		while(temp!=null){
+			if(temp.number==number){
+				System.out.println("found number" + number);
+				break;
+			}
+			else{
+				temp=temp.next;
+			}
 		}
 	}
 
+//deleting any number from linked list
+	
+	public void deleteany(int number){
+		LinkedList current=Head;
+		LinkedList previous=null;
+		
+		while(current!=null){
+			if(current.number==number){
+				previous.next=current.next;
+				current.next=null;
+				break;
+			}
+			else{
+				previous=current;
+				current=current.next;
+			}
+		}	
+	}
+	
+//reverse linkedlist
+	
+	public void reverse(){
+		
+		LinkedList current=Head;
+		LinkedList prev=null;
+		LinkedList next;
+		
+		while(current !=null){
+			next=current.next;
+			current.next=prev;
+			prev=current;
+			current=next;
+			
+		}
+		Head=prev;
+		
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		LinkedList linkedlist=new LinkedList();
 		System.out.println(linkedlist.isEmpty());
-		linkedlist.insert(45);
-		linkedlist.insert(46);
-		linkedlist.insert(47);
+		for(int i=0;i<10;i++){
+			linkedlist.insert(i);
+		}
+		linkedlist.display();
+		linkedlist.delete();
 		linkedlist.display();
 		
-
+		linkedlist.search(48);
+		
+		linkedlist.deleteany(4);
+		
+		linkedlist.display();
+		linkedlist.reverse();
+		linkedlist.display();
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
