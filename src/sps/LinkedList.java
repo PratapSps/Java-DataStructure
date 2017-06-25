@@ -104,7 +104,7 @@ public class LinkedList {
 //insert at any point in linked list	
 public void insertAny(int number,int data){
 	LinkedList current=Head;
-	int num=0;
+	int num=1;
 	while (current !=null){
 		if(num==number){
 			LinkedList newLink=new LinkedList(data);
