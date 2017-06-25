@@ -101,6 +101,25 @@ public class LinkedList {
 		
 	}
 	
+//insert at any point in linked list	
+public void insertAny(int number,int data){
+	LinkedList current=Head;
+	int num=0;
+	while (current !=null){
+		if(num==number){
+			LinkedList newLink=new LinkedList(data);
+			newLink.next=current.next;
+			current.next=newLink;
+		break;	
+		}
+		else{
+			current=current.next;
+			num+=1;
+		}
+		
+	}
+}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -120,11 +139,8 @@ public class LinkedList {
 		linkedlist.display();
 		linkedlist.reverse();
 		linkedlist.display();
-		
-		
-		
-		
-		
+		linkedlist.insertAny(1, 10);
+		linkedlist.display();
 		
 		
 	}
