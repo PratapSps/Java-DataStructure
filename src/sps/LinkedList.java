@@ -101,11 +101,7 @@ public class LinkedList {
 		
 	}
 	
-<<<<<<< HEAD
-	public void sortList(){
-		
-	}
-=======
+
 //insert at any point in linked list	
 public void insertAny(int number,int data){
 	LinkedList current=Head;
