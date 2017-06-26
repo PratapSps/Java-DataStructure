@@ -101,12 +101,16 @@ public class LinkedList {
 		
 	}
 	
+	public void sortList(){
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		LinkedList linkedlist=new LinkedList();
 		System.out.println(linkedlist.isEmpty());
-		for(int i=0;i<10;i++){
+		for(int i=10;i>0;i--){
 			linkedlist.insert(i);
 		}
 		linkedlist.display();
@@ -118,14 +122,9 @@ public class LinkedList {
 		linkedlist.deleteany(4);
 		
 		linkedlist.display();
-		linkedlist.reverse();
+		//linkedlist.reverse();
 		linkedlist.display();
-		
-		
-		
-		
-		
-		
+				
 		
 	}
 
