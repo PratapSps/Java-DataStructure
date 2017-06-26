@@ -101,16 +101,41 @@ public class LinkedList {
 		
 	}
 	
+<<<<<<< HEAD
 	public void sortList(){
 		
 	}
+=======
+//insert at any point in linked list	
+public void insertAny(int number,int data){
+	LinkedList current=Head;
+	int num=1;
+	while (current !=null){
+		if(num==number){
+			LinkedList newLink=new LinkedList(data);
+			newLink.next=current.next;
+			current.next=newLink;
+		break;	
+		}
+		else{
+			current=current.next;
+			num+=1;
+		}
+		
+	}
+}
+>>>>>>> 0bb4c4c3890d7c75a57c16af65a437b807aa16c8
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		LinkedList linkedlist=new LinkedList();
 		System.out.println(linkedlist.isEmpty());
+<<<<<<< HEAD
 		for(int i=10;i>0;i--){
+=======
+		for(int i=0;i<10;i++){
+>>>>>>> 0bb4c4c3890d7c75a57c16af65a437b807aa16c8
 			linkedlist.insert(i);
 		}
 		linkedlist.display();
@@ -122,9 +147,17 @@ public class LinkedList {
 		linkedlist.deleteany(4);
 		
 		linkedlist.display();
+<<<<<<< HEAD
 		//linkedlist.reverse();
 		linkedlist.display();
 				
+=======
+		linkedlist.reverse();
+		linkedlist.display();
+		linkedlist.insertAny(1, 10);
+		linkedlist.display();
+		
+>>>>>>> 0bb4c4c3890d7c75a57c16af65a437b807aa16c8
 		
 	}
 
